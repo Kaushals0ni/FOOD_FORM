@@ -1,0 +1,43 @@
+﻿@model CaseStudy_PNA.Models.TBLFood
+
+@{
+    ViewBag.Title = "insertData";
+    Layout = "~/Views/Shared/Header.cshtml";
+}
+<center>
+    <h2>Insert Data</h2>
+    @using (Html.BeginForm("insertData", "Food", FormMethod.Post))
+    {
+        <table class="">
+            <tr>
+                <td>@Html.Label("Enter Dish Name")</td>
+            </tr>
+            <tr class="">
+                <td>@Html.TextBoxFor(a => a.DishName)</td>
+            </tr>
+
+            <tr class="">
+                <td><label>Enter Cuisine</label></td>
+            </tr>
+            <tr class="">
+                <td>@Html.TextBoxFor(a => a.Cuisine)</td>
+            </tr>
+
+            <tr class="">
+                <td>
+                    <label>Enter Price</label>
+                </td>
+            </tr>
+            <tr class="">
+                <td>@Html.TextBoxFor(a => a.Price)</td>
+            </tr>
+            <tr class="">
+                <td colspan="2">
+                    <input type="submit" />
+                </td>
+            </tr>
+        </table>
+    }
+</center>
+
+

@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Case Study PNA</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="container"> 
+        <div class="row w-100  text-dark bg-danger">
+            <div class="col-md-6 h3">
+                @Html.Label("Case Study")
+            </div>
+            <div class="col-md-6">
+                <a class="h1 p-3 btn btn-dark m-2" href="/Food/getData/">Display Data</a>
+                <a class="h1 p-3 btn btn-dark m-2" href="/Food/insertData/">Add Data</a>
+                <a class="h1 p-3 btn btn-dark m-2" href="/Food/logout/">Logout</a>
+            </div>
+            <div class="text-center text-light bg-dark">
+                <h1>Hello, @Session["user"]</h1>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+
+    <div>
+        <center>
+            <p class="bg-black text-danger text-decoration-underline w-100 m-0 p-3" style="bottom: 0px; position: fixed">&copy;Admin OF THIS WEB APP IS: 22MCA083 / 22MCA138</p>
+        </center>
+    </div>
+</body>
+</html>
